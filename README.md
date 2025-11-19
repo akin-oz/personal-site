@@ -9,8 +9,8 @@ Live: https://akinoztorun.dev
 - Short profile and focus as a Senior Frontend Engineer
 - Links to GitHub, LinkedIn, and my newsletter "Ownership in Practice"
 - Two example projects:
-    - Energy portfolio vertical slice (GraphQL, TS, React)
-    - Next.js SWR quality demo
+  - Energy portfolio vertical slice (GraphQL, TS, React)
+  - Next.js SWR quality demo
 
 ## Stack
 

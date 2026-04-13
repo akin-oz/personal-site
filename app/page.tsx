@@ -9,12 +9,12 @@ export default function HomePage() {
           <div className="hero-text">
             <p className="eyebrow">Akın Öztorun · Senior Frontend Engineer</p>
             <h1 className="hero-title">
-              Contracts, slices, and calm releases.
+              Nine years shipping frontend that holds up at scale.
             </h1>
             <p className="hero-lead">
-              I help product teams ship thin vertical slices that match real
-              data, not guesses. Contract first, clear quality checks, and UI
-              that fits the rest of the system.
+              I own frontend architecture end to end — from API contracts to CI
+              quality gates. My last funnel handled 400K applications per year; I
+              took its completion rate from 39% to 65%.
             </p>
             <div className="hero-actions">
               <Link
@@ -41,120 +41,33 @@ export default function HomePage() {
           </div>
 
           <div className="hero-card">
-            <p className="hero-card-label">What I do best</p>
-            <ul className="hero-chip-list">
-              <li className="chip">API first frontend work</li>
-              <li className="chip">Vertical slices</li>
-              <li className="chip">Quality in CI</li>
-              <li className="chip">Performance and reliability</li>
-            </ul>
+            <p className="hero-card-label">Track record</p>
+            <div className="how-grid">
+              <div className="how-item">
+                <div className="how-content">
+                  <h3 className="how-title">9+ years</h3>
+                  <p className="how-text">product teams</p>
+                </div>
+              </div>
+              <div className="how-item">
+                <div className="how-content">
+                  <h3 className="how-title">400K apps/year</h3>
+                  <p className="how-text">system scale</p>
+                </div>
+              </div>
+              <div className="how-item">
+                <div className="how-content">
+                  <h3 className="how-title">39% → 65%</h3>
+                  <p className="how-text">funnel completion</p>
+                </div>
+              </div>
+            </div>
+            <p className="hero-card-note">
+              Best fit: product teams in EU time zones that care about
+              contracts, tests, and clear ownership.
+            </p>
           </div>
         </div>
-      </section>
-
-      {/* Selected projects */}
-      <section className="section">
-        <header className="section-header">
-          <h2 className="section-title">Selected projects</h2>
-          <p className="section-subtitle">
-            Architecture demos that show how I approach contracts, data
-            fetching, and quality.
-          </p>
-        </header>
-
-        <div className="card-grid">
-          <article className="card">
-            <header className="card-header">
-              <h3 className="card-title">Energy portfolio slice</h3>
-              <span className="pill">Full stack</span>
-            </header>
-            <p className="card-body-text">
-              An architecture demo modelling customers, projects, and assets
-              with a typed GraphQL contract and a thin React UI on top.
-            </p>
-            <div className="card-tag-row">
-              <span className="tag">TypeScript</span>
-              <span className="tag">GraphQL</span>
-              <span className="tag">React</span>
-              <span className="tag">Node</span>
-            </div>
-            <div className="card-actions">
-              <Link
-                href="https://github.com/akin-oz/energy-portfolio-slice"
-                target="_blank"
-                className="button button-secondary"
-              >
-                View repository
-              </Link>
-            </div>
-          </article>
-
-          <article className="card">
-            <header className="card-header">
-              <h3 className="card-title">Next SWR quality demo</h3>
-              <span className="pill">Frontend</span>
-            </header>
-            <p className="card-body-text">
-              Next.js app that shows how I handle data fetching, caching,
-              loading states, and error paths with SWR and a clear quality
-              setup.
-            </p>
-            <div className="card-tag-row">
-              <span className="tag">Next.js</span>
-              <span className="tag">SWR</span>
-              <span className="tag">TypeScript</span>
-              <span className="tag">Testing</span>
-            </div>
-            <div className="card-actions">
-              <Link
-                href="https://next-swr-quality-demo.vercel.app/"
-                target="_blank"
-                className="button button-primary"
-              >
-                Live demo
-              </Link>
-              <Link
-                href="https://github.com/akin-oz/next-swr-quality-demo"
-                target="_blank"
-                className="button button-secondary"
-              >
-                View repository
-              </Link>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      {/* Writing */}
-      <section className="section">
-        <header className="section-header">
-          <h2 className="section-title">Writing</h2>
-          <p className="section-subtitle">
-            Short, practical pieces for engineers who want more ownership.
-          </p>
-        </header>
-
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">Clarify Before You Code</h3>
-            <span className="pill">Newsletter</span>
-          </header>
-          <div className="card-body">
-            <p className="card-body-text">
-              A growing series on contracts, slices, and small habits that make
-              teams calmer and faster. Focus is on real tickets, not theory.
-            </p>
-          </div>
-          <div className="card-actions">
-            <Link
-              href="https://ownershipinpractice.substack.com"
-              target="_blank"
-              className="button button-secondary"
-            >
-              Read on Substack
-            </Link>
-          </div>
-        </article>
       </section>
 
       {/* Experience */}
@@ -168,7 +81,7 @@ export default function HomePage() {
 
         <article className="card card-wide">
           <header className="card-header">
-            <h3 className="card-title">Senior Frontend Engineer (Freelance)</h3>
+            <h3 className="card-title">Senior Frontend Engineer</h3>
             <span className="pill">Proxify · 2025–present</span>
           </header>
           <p className="card-body-text">
@@ -286,19 +199,124 @@ export default function HomePage() {
         </article>
       </section>
 
+      {/* Selected projects */}
+      <section className="section">
+        <header className="section-header">
+          <h2 className="section-title">Selected projects</h2>
+          <p className="section-subtitle">
+            Architecture demos that show how I approach contracts, data
+            fetching, and quality.
+          </p>
+        </header>
+
+        <div className="card-grid">
+          <article className="card">
+            <header className="card-header">
+              <h3 className="card-title">Energy portfolio slice</h3>
+              <span className="pill">Full stack</span>
+            </header>
+            <p className="card-body-text">
+              An architecture demo modelling customers, projects, and assets
+              with a typed GraphQL contract and a thin React UI on top.
+            </p>
+            <div className="card-tag-row">
+              <span className="tag">TypeScript</span>
+              <span className="tag">GraphQL</span>
+              <span className="tag">React</span>
+              <span className="tag">Node</span>
+            </div>
+            <div className="card-actions">
+              <Link
+                href="https://github.com/akin-oz/energy-portfolio-slice"
+                target="_blank"
+                className="button button-secondary"
+              >
+                View repository
+              </Link>
+            </div>
+          </article>
+
+          <article className="card">
+            <header className="card-header">
+              <h3 className="card-title">Next SWR quality demo</h3>
+              <span className="pill">Frontend</span>
+            </header>
+            <p className="card-body-text">
+              Next.js app that shows how I handle data fetching, caching,
+              loading states, and error paths with SWR and a clear quality
+              setup.
+            </p>
+            <div className="card-tag-row">
+              <span className="tag">Next.js</span>
+              <span className="tag">SWR</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">Testing</span>
+            </div>
+            <div className="card-actions">
+              <Link
+                href="https://next-swr-quality-demo.vercel.app/"
+                target="_blank"
+                className="button button-primary"
+              >
+                Live demo
+              </Link>
+              <Link
+                href="https://github.com/akin-oz/next-swr-quality-demo"
+                target="_blank"
+                className="button button-secondary"
+              >
+                View repository
+              </Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* Writing */}
+      <section className="section">
+        <header className="section-header">
+          <h2 className="section-title">Writing</h2>
+          <p className="section-subtitle">
+            Short, practical pieces for engineers who want more ownership.
+          </p>
+        </header>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Clarify Before You Code</h3>
+            <span className="pill">Newsletter</span>
+          </header>
+          <div className="card-body">
+            <p className="card-body-text">
+              A growing series on contracts, slices, and small habits that make
+              teams calmer and faster. Focus is on real tickets, not theory.
+            </p>
+          </div>
+          <div className="card-actions">
+            <Link
+              href="https://ownershipinpractice.substack.com"
+              target="_blank"
+              className="button button-secondary"
+            >
+              Read on Substack
+            </Link>
+          </div>
+        </article>
+      </section>
+
       {/* Contact */}
       <section className="section section-last">
         <header className="section-header">
           <h2 className="section-title">Contact</h2>
           <p className="section-subtitle">
-            For roles, slices, or just to talk about product engineering.
+            Open to senior and staff frontend roles in product companies.
           </p>
         </header>
 
         <article className="card card-wide">
           <p className="card-body-text">
-            Best fit: product companies in EU time zones that care about
-            contracts, tests, and clear ownership.
+            Based in EU time zones. Available for on-site, hybrid, or remote
+            positions. Let&#39;s talk.
           </p>
           <div className="card-actions">
             <Link

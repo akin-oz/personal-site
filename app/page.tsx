@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 export default function HomePage() {
@@ -50,10 +48,6 @@ export default function HomePage() {
               <li className="chip">Quality in CI</li>
               <li className="chip">Performance and reliability</li>
             </ul>
-            <p className="hero-card-note">
-              Best fit: product teams in EU time zones that care about
-              contracts, tests, and clear ownership.
-            </p>
           </div>
         </div>
       </section>
@@ -63,7 +57,8 @@ export default function HomePage() {
         <header className="section-header">
           <h2 className="section-title">Selected projects</h2>
           <p className="section-subtitle">
-            Small but complete slices that show how I work.
+            Architecture demos that show how I approach contracts, data
+            fetching, and quality.
           </p>
         </header>
 
@@ -74,9 +69,8 @@ export default function HomePage() {
               <span className="pill">Full stack</span>
             </header>
             <p className="card-body-text">
-              GraphQL and React slice for an energy portfolio domain. Models
-              customers, projects, and assets with a typed contract and a thin
-              UI on top.
+              An architecture demo modelling customers, projects, and assets
+              with a typed GraphQL contract and a thin React UI on top.
             </p>
             <div className="card-tag-row">
               <span className="tag">TypeScript</span>
@@ -113,6 +107,13 @@ export default function HomePage() {
             </div>
             <div className="card-actions">
               <Link
+                href="https://next-swr-quality-demo.vercel.app/"
+                target="_blank"
+                className="button button-primary"
+              >
+                Live demo
+              </Link>
+              <Link
                 href="https://github.com/akin-oz/next-swr-quality-demo"
                 target="_blank"
                 className="button button-secondary"
@@ -140,13 +141,9 @@ export default function HomePage() {
           </header>
           <div className="card-body">
             <p className="card-body-text">
-              A series on contracts, slices, and small habits that make teams
-              calmer and faster. The focus is on real tickets, not theory.
+              A growing series on contracts, slices, and small habits that make
+              teams calmer and faster. Focus is on real tickets, not theory.
             </p>
-            <ul className="list">
-              <li>Issue 1: Do not start vague tickets</li>
-              <li>Issue 2: Contracts first, screens second</li>
-            </ul>
           </div>
           <div className="card-actions">
             <Link
@@ -156,6 +153,75 @@ export default function HomePage() {
             >
               Read on Substack
             </Link>
+          </div>
+        </article>
+      </section>
+
+      {/* Experience */}
+      <section className="section">
+        <header className="section-header">
+          <h2 className="section-title">Experience</h2>
+          <p className="section-subtitle">
+            Nine years owning frontend in product teams.
+          </p>
+        </header>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Senior Frontend Engineer (Freelance)</h3>
+            <span className="pill">Proxify · 2025–present</span>
+          </header>
+          <p className="card-body-text">
+            Frontend architecture owner for a Vue 3 / Nuxt platform. Led a Nuxt
+            4 migration to Feature-Sliced Design, established a token-driven
+            design system over PrimeVue, and introduced structured observability
+            with Mixpanel and Sentry.
+          </p>
+          <div className="card-tag-row">
+            <span className="tag">Vue.js</span>
+            <span className="tag">Nuxt.js</span>
+            <span className="tag">TypeScript</span>
+            <span className="tag">FSD</span>
+            <span className="tag">Storybook</span>
+          </div>
+        </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Senior Software Engineer</h3>
+            <span className="pill">Proxify · 2022–2025</span>
+          </header>
+          <p className="card-body-text">
+            Owned an ATS funnel processing ~400K applications/year. Increased
+            completion from 39% to 65% through instrumentation-driven iteration.
+            Built a shared UI component library, instituted Lighthouse CI and
+            SonarQube, and received the Proxify Quality Award 2024.
+          </p>
+          <div className="card-tag-row">
+            <span className="tag">Vue.js</span>
+            <span className="tag">Nuxt.js</span>
+            <span className="tag">TypeScript</span>
+            <span className="tag">React</span>
+            <span className="tag">Node.js</span>
+            <span className="tag">CI/CD</span>
+          </div>
+        </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Frontend Engineer</h3>
+            <span className="pill">Skeyl · 2016–2022</span>
+          </header>
+          <p className="card-body-text">
+            Primary React/TypeScript owner for client SPAs and dashboards.
+            Raised Lighthouse scores from the 40s to the 90s. Built backend
+            utilities with Node.js and AWS Lambda.
+          </p>
+          <div className="card-tag-row">
+            <span className="tag">React</span>
+            <span className="tag">TypeScript</span>
+            <span className="tag">Node.js</span>
+            <span className="tag">AWS Lambda</span>
           </div>
         </article>
       </section>
@@ -253,7 +319,9 @@ export default function HomePage() {
       </section>
       <footer className="site-footer">
         <div className="footer-inner">
-          <span>© 2025 Akın Oztorun. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} Akın Oztorun. All rights reserved.
+          </span>
           <div className="footer-links">
             <Link href="https://github.com/akin-oz" target="_blank">
               GitHub

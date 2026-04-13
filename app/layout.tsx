@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://akinoztorun.dev",
-    title: "Akın Öztorun – Senior Frontend Engineer",
+    title: "Akın Öztorun · Senior Frontend Engineer",
     description:
       "Senior Frontend Engineer focused on product-minded frontend architecture, reliability, and quality.",
     images: [
@@ -19,9 +19,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: "https://akinoztorun.dev",
+  },
   twitter: {
     card: "summary_large_image",
-    title: "Akın Öztorun – Senior Frontend Engineer",
+    title: "Akın Öztorun · Senior Frontend Engineer",
     description:
       "Senior Frontend Engineer focused on product-minded frontend architecture, reliability, and quality.",
     images: ["https://akinoztorun.dev/og-akinoztorun-dev.jpg"],

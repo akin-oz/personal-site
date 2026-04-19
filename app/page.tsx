@@ -7,14 +7,16 @@ export default function HomePage() {
       <section className="section section-hero">
         <div className="hero-layout">
           <div className="hero-text">
-            <p className="eyebrow">Akın Öztorun · Senior Frontend Engineer</p>
+            <p className="eyebrow">Akın Öztorun · Senior Product Engineer</p>
             <h1 className="hero-title">
-              Nine years shipping frontend that holds up at scale.
+              Nine years finding the missing wires.
             </h1>
             <p className="hero-lead">
-              I own frontend architecture end to end — from API contracts to CI
-              quality gates. My last funnel handled 400K applications per year; I
-              took its completion rate from 39% to 65%.
+              The right architecture doesn&apos;t fail silently. Missing
+              connections do. I instrument before I build, fix root causes
+              before I patch, and wire prevention into CI so the same bug
+              can&apos;t ship twice. My last funnel handled 400K applications
+              a year; I took it from 39% to 65% by measuring first.
             </p>
             <div className="hero-actions">
               <Link
@@ -64,7 +66,8 @@ export default function HomePage() {
             </div>
             <p className="hero-card-note">
               Best fit: product teams in EU time zones that care about
-              contracts, tests, and clear ownership.
+              contracts, tests, and clear ownership. Teams that treat AI
+              tooling as infrastructure, not autocomplete.
             </p>
           </div>
         </div>
@@ -85,10 +88,11 @@ export default function HomePage() {
             <span className="pill">Proxify · 2025–present</span>
           </header>
           <p className="card-body-text">
-            Frontend architecture owner for a Vue 3 / Nuxt platform. Led a Nuxt
-            4 migration to Feature-Sliced Design, established a token-driven
-            design system over PrimeVue, and introduced structured observability
-            with Mixpanel and Sentry.
+            Architecture owner for a Vue 3 / Nuxt platform at a
+            400K-application-per-year scale. Drove a Nuxt 4 migration to
+            Feature-Sliced Design to enforce clear ownership boundaries.
+            Established a token-driven design system over PrimeVue and
+            introduced structured observability with Mixpanel and Sentry.
           </p>
           <div className="card-tag-row">
             <span className="tag">Vue.js</span>
@@ -105,10 +109,12 @@ export default function HomePage() {
             <span className="pill">Proxify · 2022–2025</span>
           </header>
           <p className="card-body-text">
-            Owned an ATS funnel processing ~400K applications/year. Increased
-            completion from 39% to 65% through instrumentation-driven iteration.
-            Built a shared UI component library, instituted Lighthouse CI and
-            SonarQube, and received the Proxify Quality Award 2024.
+            Owned an ATS funnel processing 400K applications a year. Took
+            completion from 39% to 65% by instrumenting first: measuring where
+            users dropped, forming hypotheses, shipping targeted fixes,
+            confirming with data. Built the shared UI component library, added
+            Lighthouse CI and SonarQube, and received the Proxify Quality
+            Award 2024.
           </p>
           <div className="card-tag-row">
             <span className="tag">Vue.js</span>
@@ -127,7 +133,8 @@ export default function HomePage() {
           </header>
           <p className="card-body-text">
             Primary React/TypeScript owner for client SPAs and dashboards.
-            Raised Lighthouse scores from the 40s to the 90s. Built backend
+            Moved Lighthouse scores from the 40s to the 90s, making performance
+            regressions visible before they reached users. Built backend
             utilities with Node.js and AWS Lambda.
           </p>
           <div className="card-tag-row">
@@ -195,6 +202,20 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+
+            <div className="how-item">
+              <div className="how-number">5</div>
+              <div className="how-content">
+                <h3 className="how-title">Agentic engineering</h3>
+                <p className="how-text">
+                  Claude Code runs as a configured system, not a chat window.
+                  CLAUDE.md encodes stop rules and architectural constraints.
+                  Hooks enforce what CLAUDE.md requests. The model gets routed
+                  by task complexity. Every correction becomes a permanent
+                  guardrail visible in git history. The loop improves itself.
+                </p>
+              </div>
+            </div>
           </div>
         </article>
       </section>
@@ -210,6 +231,40 @@ export default function HomePage() {
         </header>
 
         <div className="card-grid">
+          <article className="card">
+            <header className="card-header">
+              <h3 className="card-title">Base360 investigation</h3>
+              <span className="pill">Multi-tenant · Python</span>
+            </header>
+            <p className="card-body-text">
+              A multi-tenant rental ops dashboard with the right architecture
+              and none of it connected. 14 bugs across security, data integrity,
+              and infrastructure: cross-tenant revenue exposure via an unscoped
+              Redis cache key, float arithmetic corrupting money totals, a
+              silent auth fallback granting strangers access to real client
+              data, and a hardcoded growth badge misleading property managers
+              on every load. Each bug has a postmortem, a regression test, and
+              a structural fix that makes the same class of bug a CI failure.
+              89 tests. 0 failures.
+            </p>
+            <div className="card-tag-row">
+              <span className="tag">Python</span>
+              <span className="tag">FastAPI</span>
+              <span className="tag">React</span>
+              <span className="tag">Redis</span>
+              <span className="tag">PostgreSQL</span>
+            </div>
+            <div className="card-actions">
+              <Link
+                href="https://github.com/akin-oz/Base360"
+                target="_blank"
+                className="button button-secondary"
+              >
+                View repository
+              </Link>
+            </div>
+          </article>
+
           <article className="card">
             <header className="card-header">
               <h3 className="card-title">Energy portfolio slice</h3>
@@ -302,6 +357,29 @@ export default function HomePage() {
             </Link>
           </div>
         </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">What 14 bugs taught me about trust</h3>
+            <span className="pill">Investigation notes</span>
+          </header>
+          <div className="card-body">
+            <p className="card-body-text">
+              What the Base360 investigation revealed about how production
+              systems fail silently: the right infrastructure, none of it wired
+              together.
+            </p>
+          </div>
+          <div className="card-actions">
+            <Link
+              href="https://github.com/akin-oz/Base360/blob/main/NOTES.md"
+              target="_blank"
+              className="button button-secondary"
+            >
+              View notes
+            </Link>
+          </div>
+        </article>
       </section>
 
       {/* Contact */}
@@ -309,7 +387,7 @@ export default function HomePage() {
         <header className="section-header">
           <h2 className="section-title">Contact</h2>
           <p className="section-subtitle">
-            Open to senior and staff frontend roles in product companies.
+            Open to senior and staff product engineer roles in product companies.
           </p>
         </header>
 

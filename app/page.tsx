@@ -26,13 +26,6 @@ export default function HomePage() {
                 Email me
               </Link>
               <Link
-                href="https://github.com/akin-oz/engineering-decisions"
-                className="button button-secondary"
-                target="_blank"
-              >
-                Read the decisions
-              </Link>
-              <Link
                 href="https://www.linkedin.com/in/oztorun"
                 className="button button-ghost"
                 target="_blank"

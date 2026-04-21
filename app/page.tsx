@@ -30,7 +30,7 @@ export default function HomePage() {
                 className="button button-secondary"
                 target="_blank"
               >
-                14 ADRs behind the numbers
+                Read the decisions
               </Link>
               <Link
                 href="https://www.linkedin.com/in/oztorun"
@@ -560,7 +560,7 @@ export default function HomePage() {
               href="https://github.com/akin-oz/engineering-decisions"
               target="_blank"
             >
-              14 ADRs · 39%→65% funnel
+              Decisions
             </Link>
             <Link href="https://www.linkedin.com/in/oztorun" target="_blank">
               LinkedIn

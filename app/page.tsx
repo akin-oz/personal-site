@@ -39,6 +39,13 @@ export default function HomePage() {
               >
                 View LinkedIn
               </Link>
+              <Link
+                href="https://ownershipinpractice.substack.com"
+                className="button button-ghost"
+                target="_blank"
+              >
+                Read the newsletter
+              </Link>
             </div>
           </div>
 

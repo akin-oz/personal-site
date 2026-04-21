@@ -218,6 +218,11 @@ body {
 
 .card-wide {
   margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-wide:last-child {
+  margin-bottom: 0;
 }
 
 .card-header {

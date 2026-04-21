@@ -263,7 +263,7 @@ export default function HomePage() {
               <h3 className="card-title">
                 Fix instrumentation before fixing UX
               </h3>
-              <span className="pill">ADR-006 · Proxify</span>
+              <span className="pill">ADR-006</span>
             </header>
             <p className="card-body-text">
               The ATS funnel was at 39%. The team wanted to redesign screens. I
@@ -285,33 +285,9 @@ export default function HomePage() {
           <article className="card">
             <header className="card-header">
               <h3 className="card-title">
-                Contract-first OpenAPI + MSW
-              </h3>
-              <span className="pill">ADR-002 · Community platform</span>
-            </header>
-            <p className="card-body-text">
-              Frontend and backend were blocking each other in weekly sync
-              meetings. I pushed OpenAPI as the agreement, MSW as the
-              implementation, and CI as the enforcement. Sync meetings went
-              away. API integration rework went to zero.
-            </p>
-            <div className="card-actions">
-              <Link
-                href="https://github.com/akin-oz/engineering-decisions/blob/main/decisions/002-contract-first-openapi-msw.md"
-                target="_blank"
-                className="button button-secondary"
-              >
-                Read ADR
-              </Link>
-            </div>
-          </article>
-
-          <article className="card">
-            <header className="card-header">
-              <h3 className="card-title">
                 SonarQube + semantic release as CI gates
               </h3>
-              <span className="pill">ADR-007 · Proxify</span>
+              <span className="pill">ADR-007</span>
             </header>
             <p className="card-body-text">
               Code review culture had plateaued. I wired SonarQube and semantic
@@ -333,7 +309,7 @@ export default function HomePage() {
           <article className="card">
             <header className="card-header">
               <h3 className="card-title">Decisions I reversed</h3>
-              <span className="pill">ADR-010 · Meta</span>
+              <span className="pill">ADR-010</span>
             </header>
             <p className="card-body-text">
               The honest one. What I got wrong across projects, what changed my

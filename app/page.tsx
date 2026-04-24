@@ -347,17 +347,13 @@ export default function HomePage() {
               <span className="pill">Multi-tenant · Python</span>
             </header>
             <p className="card-body-text">
-              Multi-tenant rental ops platform handed over with a vague
-              complaint: &ldquo;two clients say the numbers are wrong, and one
-              is seeing data that isn&rsquo;t theirs.&rdquo; Traced 14
-              production-class failures — cross-tenant cache poisoning,
-              float() on money totals, fail-open auth silently granting
-              strangers access to a real client&rsquo;s dashboard, PII in
-              telemetry. The through-line: every layer had the right
-              infrastructure; none of it was wired together. Fixed each bug
-              with a postmortem and a regression test; one Playwright
-              tenant-switch test and three convention lints now block the
-              whole class at CI.
+              Multi-tenant rental ops platform with the right infrastructure
+              and none of it wired together. Traced 14 production-class
+              failures — cross-tenant cache poisoning, float() on money
+              totals, fail-open auth exposing real client data, PII in
+              telemetry. Each bug ships with a postmortem and regression
+              test; a Playwright tenant-switch test and three convention
+              lints now block the whole class at CI.
             </p>
             <div className="card-tag-row">
               <span className="tag">Python</span>

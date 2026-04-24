@@ -343,19 +343,21 @@ export default function HomePage() {
         <div className="card-grid">
           <article className="card">
             <header className="card-header">
-              <h3 className="card-title">Base360 investigation</h3>
+              <h3 className="card-title">PropertyOS — debugging investigation</h3>
               <span className="pill">Multi-tenant · Python</span>
             </header>
             <p className="card-body-text">
-              A multi-tenant rental ops dashboard with the right architecture
-              and none of it connected. 14 bugs across security, data integrity,
-              and infrastructure: cross-tenant revenue exposure via an unscoped
-              Redis cache key, float arithmetic corrupting money totals, a
-              silent auth fallback granting strangers access to real client
-              data, and a hardcoded growth badge misleading property managers
-              on every load. Each bug has a postmortem, a regression test, and
-              a structural fix that makes the same class of bug a CI failure.
-              89 tests. 0 failures.
+              Multi-tenant rental ops platform handed over with a vague
+              complaint: &ldquo;two clients say the numbers are wrong, and one
+              is seeing data that isn&rsquo;t theirs.&rdquo; Traced 14
+              production-class failures — cross-tenant cache poisoning,
+              float() on money totals, fail-open auth silently granting
+              strangers access to a real client&rsquo;s dashboard, PII in
+              telemetry. The through-line: every layer had the right
+              infrastructure; none of it was wired together. Fixed each bug
+              with a postmortem and a regression test; one Playwright
+              tenant-switch test and three convention lints now block the
+              whole class at CI.
             </p>
             <div className="card-tag-row">
               <span className="tag">Python</span>
@@ -366,7 +368,7 @@ export default function HomePage() {
             </div>
             <div className="card-actions">
               <Link
-                href="https://github.com/akin-oz/Base360"
+                href="https://github.com/akin-oz/propertyos-debug-investigation"
                 target="_blank"
                 className="button button-secondary"
               >
@@ -475,14 +477,14 @@ export default function HomePage() {
           </header>
           <div className="card-body">
             <p className="card-body-text">
-              What the Base360 investigation revealed about how production
+              What the PropertyOS investigation revealed about how production
               systems fail silently: the right infrastructure, none of it wired
               together.
             </p>
           </div>
           <div className="card-actions">
             <Link
-              href="https://github.com/akin-oz/Base360/blob/main/NOTES.md"
+              href="https://github.com/akin-oz/propertyos-debug-investigation/blob/main/NOTES.md"
               target="_blank"
               className="button button-secondary"
             >

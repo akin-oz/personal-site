@@ -446,13 +446,103 @@ export default function HomePage() {
 
         <article className="card card-wide">
           <header className="card-header">
-            <h3 className="card-title">Clarify Before You Code</h3>
-            <span className="pill">Newsletter</span>
+            <h3 className="card-title">How to Write Agent-Ready Tickets Before AI Breaks Your Product</h3>
+            <span className="pill">Newsletter · Apr 2026</span>
+          </header>
+          <div className="card-body">
+            <p className="card-body-text">
+              Agents don&apos;t clarify vague requirements. They hallucinate. Here&apos;s the 5-part template that makes tickets agent-ready before a single line is written.
+            </p>
+          </div>
+          <div className="card-actions">
+            <Link
+              href="https://ownershipinpractice.substack.com/p/how-to-write-agent-ready-tickets"
+              target="_blank"
+              className="button button-secondary"
+            >
+              Read article
+            </Link>
+          </div>
+        </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Incidents Are Product Work</h3>
+            <span className="pill">Newsletter · Dec 2025</span>
+          </header>
+          <div className="card-body">
+            <p className="card-body-text">
+              Most teams treat incidents as interruptions. Failures are not
+              distractions from product work. They are product work, just
+              revealed under stress.
+            </p>
+          </div>
+          <div className="card-actions">
+            <Link
+              href="https://ownershipinpractice.substack.com/p/incidents-are-product-work"
+              target="_blank"
+              className="button button-secondary"
+            >
+              Read article
+            </Link>
+          </div>
+        </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Ownership of a Vertical Slice</h3>
+            <span className="pill">Newsletter · Dec 2025</span>
+          </header>
+          <div className="card-body">
+            <p className="card-body-text">
+              Most features break for boring reasons. Not complex code — thin
+              responsibility. Here is what it looks like when one person owns
+              the outcome end to end.
+            </p>
+          </div>
+          <div className="card-actions">
+            <Link
+              href="https://ownershipinpractice.substack.com/p/ownership-of-a-vertical-slice"
+              target="_blank"
+              className="button button-secondary"
+            >
+              Read article
+            </Link>
+          </div>
+        </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Contracts First. Screens Second.</h3>
+            <span className="pill">Newsletter · Nov 2025</span>
+          </header>
+          <div className="card-body">
+            <p className="card-body-text">
+              Agree the shape once. Generate types. Mock with MSW. Guard in CI.
+              Then build the screen. Not the other way around.
+            </p>
+          </div>
+          <div className="card-actions">
+            <Link
+              href="https://ownershipinpractice.substack.com/p/contracts-first-screens-second"
+              target="_blank"
+              className="button button-secondary"
+            >
+              Read article
+            </Link>
+          </div>
+        </article>
+
+        <article className="card card-wide">
+          <header className="card-header">
+            <h3 className="card-title">Ownership in Practice</h3>
+            <span className="pill">Newsletter · Ongoing</span>
           </header>
           <div className="card-body">
             <p className="card-body-text">
               A growing series on contracts, slices, and small habits that make
-              teams calmer and faster. Focus is on real tickets, not theory.
+              teams calmer and faster. Seven issues published. New ones every
+              Tuesday.
             </p>
           </div>
           <div className="card-actions">
@@ -501,8 +591,7 @@ export default function HomePage() {
 
         <article className="card card-wide">
           <p className="card-body-text">
-            Based in EU time zones. Available for on-site, hybrid, or remote
-            positions. Let&#39;s talk.
+            Based in EU time zones. Available for remote or hybrid positions. Let&#39;s talk.
           </p>
           <div className="card-actions">
             <Link
@@ -521,6 +610,7 @@ export default function HomePage() {
           </div>
         </article>
       </section>
+
       <footer className="site-footer">
         <div className="footer-inner">
           <span>

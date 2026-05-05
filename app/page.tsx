@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { fetchSubstackPosts } from "./lib/substack-feed";
 
-export default function HomePage() {
+export const revalidate = 3600;
+
+export default async function HomePage() {
+  const posts = await fetchSubstackPosts();
   return (
     <main className="page">
       {/* Hero */}
@@ -440,144 +444,52 @@ export default function HomePage() {
         <header className="section-header">
           <h2 className="section-title">Writing</h2>
           <p className="section-subtitle">
-            Short, practical pieces for engineers who want more ownership.
-          </p>
-        </header>
-
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">How to Write Agent-Ready Tickets Before AI Breaks Your Product</h3>
-            <span className="pill">Newsletter · Apr 2026</span>
-          </header>
-          <div className="card-body">
-            <p className="card-body-text">
-              Agents don&apos;t clarify vague requirements. They hallucinate. Here&apos;s the 5-part template that makes tickets agent-ready before a single line is written.
-            </p>
-          </div>
-          <div className="card-actions">
-            <Link
-              href="https://ownershipinpractice.substack.com/p/how-to-write-agent-ready-tickets"
-              target="_blank"
-              className="button button-secondary"
-            >
-              Read article
-            </Link>
-          </div>
-        </article>
-
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">Incidents Are Product Work</h3>
-            <span className="pill">Newsletter · Dec 2025</span>
-          </header>
-          <div className="card-body">
-            <p className="card-body-text">
-              Most teams treat incidents as interruptions. Failures are not
-              distractions from product work. They are product work, just
-              revealed under stress.
-            </p>
-          </div>
-          <div className="card-actions">
-            <Link
-              href="https://ownershipinpractice.substack.com/p/incidents-are-product-work"
-              target="_blank"
-              className="button button-secondary"
-            >
-              Read article
-            </Link>
-          </div>
-        </article>
-
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">Ownership of a Vertical Slice</h3>
-            <span className="pill">Newsletter · Dec 2025</span>
-          </header>
-          <div className="card-body">
-            <p className="card-body-text">
-              Most features break for boring reasons. Not complex code — thin
-              responsibility. Here is what it looks like when one person owns
-              the outcome end to end.
-            </p>
-          </div>
-          <div className="card-actions">
-            <Link
-              href="https://ownershipinpractice.substack.com/p/ownership-of-a-vertical-slice"
-              target="_blank"
-              className="button button-secondary"
-            >
-              Read article
-            </Link>
-          </div>
-        </article>
-
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">Contracts First. Screens Second.</h3>
-            <span className="pill">Newsletter · Nov 2025</span>
-          </header>
-          <div className="card-body">
-            <p className="card-body-text">
-              Agree the shape once. Generate types. Mock with MSW. Guard in CI.
-              Then build the screen. Not the other way around.
-            </p>
-          </div>
-          <div className="card-actions">
-            <Link
-              href="https://ownershipinpractice.substack.com/p/contracts-first-screens-second"
-              target="_blank"
-              className="button button-secondary"
-            >
-              Read article
-            </Link>
-          </div>
-        </article>
-
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">Ownership in Practice</h3>
-            <span className="pill">Newsletter · Ongoing</span>
-          </header>
-          <div className="card-body">
-            <p className="card-body-text">
-              A growing series on contracts, slices, and small habits that make
-              teams calmer and faster. Seven issues published. New ones every
-              Tuesday.
-            </p>
-          </div>
-          <div className="card-actions">
+            Latest from{" "}
             <Link
               href="https://ownershipinpractice.substack.com"
               target="_blank"
-              className="button button-secondary"
             >
-              Read on Substack
+              Ownership in Practice
             </Link>
-          </div>
-        </article>
+            . Short, practical pieces for engineers who want more ownership.
+          </p>
+        </header>
 
-        <article className="card card-wide">
-          <header className="card-header">
-            <h3 className="card-title">What 14 bugs taught me about trust</h3>
-            <span className="pill">Investigation notes</span>
-          </header>
-          <div className="card-body">
+        {posts.length === 0 ? (
+          <article className="card card-wide">
             <p className="card-body-text">
-              What the PropertyOS investigation revealed about how production
-              systems fail silently: the right infrastructure, none of it wired
-              together.
+              The feed is taking a moment. Read it directly on{" "}
+              <Link
+                href="https://ownershipinpractice.substack.com"
+                target="_blank"
+              >
+                Substack
+              </Link>
+              .
             </p>
-          </div>
-          <div className="card-actions">
-            <Link
-              href="https://github.com/akin-oz/propertyos-debug-investigation/blob/main/NOTES.md"
-              target="_blank"
-              className="button button-secondary"
-            >
-              View notes
-            </Link>
-          </div>
-        </article>
+          </article>
+        ) : (
+          posts.map((post) => (
+            <article key={post.href} className="card card-wide">
+              <header className="card-header">
+                <h3 className="card-title">{post.title}</h3>
+                <span className="pill">Newsletter · {post.date}</span>
+              </header>
+              <div className="card-body">
+                <p className="card-body-text">{post.blurb}</p>
+              </div>
+              <div className="card-actions">
+                <Link
+                  href={post.href}
+                  target="_blank"
+                  className="button button-secondary"
+                >
+                  Read article
+                </Link>
+              </div>
+            </article>
+          ))
+        )}
       </section>
 
       {/* Contact */}
